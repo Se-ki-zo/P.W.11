@@ -1,0 +1,20 @@
+.user-info__edit {
+    margin-top: 24px;
+    height: 18px;
+    width: 38px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+/* unnecessary modification */
+.user-info__edit:hover {
+    background-color: #fff;
+    color: black;
+    transition-duration:0.5s;
+}

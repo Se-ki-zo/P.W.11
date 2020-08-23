@@ -1,0 +1,15 @@
+@import url(./_required/popup__warning_required-top.css);
+@import url(./_required/popup__warning_required-bottom.css);
+@import url(./_visible/popup__warning_visible.css);
+
+.popup__warning {
+    position: absolute;
+    color: red;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 4px;
+    display: none;
+}

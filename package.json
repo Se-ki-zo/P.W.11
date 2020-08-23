@@ -1,0 +1,19 @@
+{
+  "name": "p.w.11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Se-ki-zo/P.W.11.git"
+  },
+  "author": "Sekizo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Se-ki-zo/P.W.11/issues"
+  },
+  "homepage": "https://github.com/Se-ki-zo/P.W.11#readme"
+}

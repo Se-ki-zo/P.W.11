@@ -22,7 +22,6 @@ class EditProfilePopup extends Popup {
         super.setEventListeners();
         this.popup.addEventListener('submit', e => {
             e.preventDefault();
-            //this.fullUserInfo.setUserInfo(this.inputUserName.value, this.inputUserAbout.value); Надо исправить: +++
 
             this.api.postUserInfo(this.inputUserName.value, this.inputUserAbout.value)
                 .then((data) => {

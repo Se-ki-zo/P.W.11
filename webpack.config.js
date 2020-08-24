@@ -4,7 +4,7 @@ const WebpackMd5Hash = require('webpack-md5-hash');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // добавили плагин
 module.exports = {
     entry: {
-        main: './src/index.js'
+        main: './src/script/script.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -49,7 +49,7 @@ module.exports = {
             filename: 'style.[contenthash].css',
         }),
         new HtmlWebpackPlugin({
-            inject: false,
+            inject: true,
             template: './src/index.html',
             filename: 'index.html'
         }),

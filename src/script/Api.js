@@ -29,12 +29,9 @@ class Api {
             })
     }
 
-    /*
-        Можно лучше: то что оно захардкожено никак не может влиять на ошибку 403
-        Проверьте корректность формирования адреса 
-    */
-    postUserInfo(userName, userAbout) { // если не захардкожено, то вернет 403
-        return fetch('https://praktikum.tk/cohort12/users/me', {
+
+    postUserInfo(userName, userAbout) {
+        return fetch('https://nomoreparties.co/cohort12/users/me', {
                 method: 'PATCH',
                 headers: {
                     authorization: '5783e296-2ee3-4f4f-aa27-91c21b36586c',

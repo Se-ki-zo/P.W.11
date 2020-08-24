@@ -1,4 +1,3 @@
-import "../pages/index.css"; // test
 const cardsContainer = document.querySelector('.places-list.root__section');
 const divPopupEditProfile = document.querySelector('div.popup.root__about');
 const divPopupImage = document.querySelector('div.root__image');

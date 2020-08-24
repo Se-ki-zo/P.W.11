@@ -1,1 +1,1 @@
-import "../pages/index.css"; // test
+import "../pages/index.css";

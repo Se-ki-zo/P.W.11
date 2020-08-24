@@ -1,12 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // добавили плагин
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// подключаем плагин
 const isDev = process.env.NODE_ENV === 'development';
-// создаем переменную для development-сборки
 
 
 module.exports = {
@@ -19,6 +18,14 @@ module.exports = {
     },
     module: {
         rules: [{
+                test: /\.css$/i,
+                use: [
+                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
+                    'css-loader',
+                    'postcss-loader'
+                ]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -27,15 +34,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'] // добавили минификацию CSS
-            },
-            {
-                test: /\.css$/i,
-                use: [
-                    (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                    'css-loader',
-                    'postcss-loader'
-                ]
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
@@ -46,7 +45,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                    'file-loader?name=./src/images/[name].[ext]', // указали папку, куда складывать изображения
+                    'file-loader?name=./src/images/[name].[ext]',
                     {
                         loader: 'image-webpack-loader',
                         options: {}
@@ -60,7 +59,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({ // 
+        new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
         new OptimizeCssAssetsPlugin({
@@ -79,7 +78,6 @@ module.exports = {
         new WebpackMd5Hash(),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-        }),
-
+        })
     ]
 };

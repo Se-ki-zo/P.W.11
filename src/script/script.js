@@ -1,3 +1,49 @@
+import "../pages/index.css";
+
+import {
+    Card
+} from './Card.js';
+
+
+import {
+    CardList
+} from './CardList.js';
+
+
+import {
+    Popup
+} from './Popup.js';
+
+
+import {
+    EditProfilePopup
+} from './EditProfilePopup.js';
+
+
+import {
+    ImagePopup
+} from './ImagePopup.js';
+
+
+import {
+    NewCardPopup
+} from './NewCardPopup.js';
+
+
+import {
+    UserInfo
+} from './UserInfo.js';
+
+
+import {
+    FormValidator
+} from './FormValidator.js';
+
+
+import {
+    Api
+} from './Api.js';
+
 const cardsContainer = document.querySelector('.places-list.root__section');
 const divPopupEditProfile = document.querySelector('div.popup.root__about');
 const divPopupImage = document.querySelector('div.root__image');
@@ -62,3 +108,22 @@ newCardPopup.popup.addEventListener('submit', e => {
 
     newCardPopup.close();
 });
+
+export {
+    cardsContainer,
+    divPopupEditProfile,
+    divPopupImage,
+    divPopupNewCard,
+    userPhoto,
+    userNameHTML,
+    userAboutHTML,
+    formNewCardValidator,
+    formEditValidator,
+    newCardPopup,
+    userInfo,
+    imagePopup,
+    cardlist,
+    options,
+    api,
+    editProfilePopup,
+};

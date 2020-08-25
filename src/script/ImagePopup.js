@@ -1,3 +1,7 @@
+import {
+    Popup
+} from './Popup.js';
+
 class ImagePopup extends Popup {
     constructor(popup, imageUrl) {
         super(popup);
@@ -9,3 +13,7 @@ class ImagePopup extends Popup {
         super.open();
     }
 }
+
+export {
+    ImagePopup
+};

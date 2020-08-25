@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
     entry: {
-        main: './src/script/index.js'
+        main: './src/script/script.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -40,13 +40,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
-                use: [
-                    'file-loader?name=./src/images/[name].[ext]',
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {}
-                    },
-                ]
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name][hash].[ext]',
+                        outputPath: 'images',
+                        esModule: false,
+                    }
+                }, ]
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,

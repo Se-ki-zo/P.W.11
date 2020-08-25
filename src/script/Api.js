@@ -51,3 +51,5 @@ class Api {
             })
     }
 }
+
+export {Api};

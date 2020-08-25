@@ -1,3 +1,7 @@
+import {
+    Popup
+} from './Popup.js';
+
 class NewCardPopup extends Popup {
     constructor(popup) {
         super(popup);
@@ -12,3 +16,7 @@ class NewCardPopup extends Popup {
         super.open();
     }
 }
+
+export {
+    NewCardPopup
+};

@@ -21,3 +21,5 @@ class UserInfo {
         this.userPhotoHTML.setAttribute('style', `background-image: url(${userPhoto})`); 
     }
 }
+
+export {UserInfo};

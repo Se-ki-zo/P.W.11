@@ -1,3 +1,7 @@
+import {
+    Popup
+} from './Popup.js';
+
 class EditProfilePopup extends Popup {
     constructor(popup, fullUserInfo, userNameElement, userAboutElement, api) {
         super(popup);
@@ -34,3 +38,7 @@ class EditProfilePopup extends Popup {
         });
     }
 }
+
+export {
+    EditProfilePopup
+};

@@ -31,7 +31,7 @@ class Api {
 
 
     postUserInfo(userName, userAbout) {
-        return fetch('https://nomoreparties.co/cohort12/users/me', {
+        return fetch(`${this.options.url}users/me`, {
                 method: 'PATCH',
                 headers: {
                     authorization: '5783e296-2ee3-4f4f-aa27-91c21b36586c',

@@ -14,7 +14,7 @@ const userInfo = new UserInfo(userNameHTML, userAboutHTML, userPhoto);
 const imagePopup = new ImagePopup(divPopupImage);
 const cardlist = new CardList(cardsContainer);
 const options = {
-    url: 'https://praktikum.tk/cohort12/',
+    url: 'https://nomoreparties.co/cohort12/',
     getRequest: {
         headers: {
             authorization: '5783e296-2ee3-4f4f-aa27-91c21b36586c'

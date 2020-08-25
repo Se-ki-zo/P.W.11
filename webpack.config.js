@@ -7,6 +7,8 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
+var ghpages = require('gh-pages');
+
 
 module.exports = {
     entry: {

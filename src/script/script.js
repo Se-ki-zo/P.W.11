@@ -43,6 +43,10 @@ import {
 import {
     Api
 } from './Api.js';
+const currentUrl =
+NODE_ENV === "production"
+  ? "https://nomoreparties.co"
+  : "http://nomoreparties.co";
 
 const cardsContainer = document.querySelector('.places-list.root__section');
 const divPopupEditProfile = document.querySelector('div.popup.root__about');
@@ -60,7 +64,7 @@ const userInfo = new UserInfo(userNameHTML, userAboutHTML, userPhoto);
 const imagePopup = new ImagePopup(divPopupImage);
 const cardlist = new CardList(cardsContainer);
 const options = {
-    url: 'https://nomoreparties.co/cohort12/',
+    url: `${currentUrl}/cohort12/`,
     getRequest: {
         headers: {
             authorization: '5783e296-2ee3-4f4f-aa27-91c21b36586c'

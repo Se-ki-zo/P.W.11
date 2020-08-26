@@ -17,3 +17,5 @@ class CardList {
         });
     }
 }
+
+export {CardList};

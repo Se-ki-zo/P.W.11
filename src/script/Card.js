@@ -68,3 +68,5 @@ class Card {
         this.cardHTML.remove();
     }
 }
+
+export {Card};

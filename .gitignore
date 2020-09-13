@@ -1,4 +1,9 @@
 /node_modules
 /dist
+<<<<<<< HEAD
 .vscode
 .DS_Store
+=======
+.DS_Store
+.vscode
+>>>>>>> 8fcc328f628e3b3d49242f0a1ab3f45df8422238

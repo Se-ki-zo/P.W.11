@@ -1,3 +1,7 @@
+import {
+    Popup
+} from './Popup.js';
+
 class EditProfilePopup extends Popup {
     constructor(popup, fullUserInfo, userNameElement, userAboutElement, api) {
         super(popup);
@@ -22,7 +26,6 @@ class EditProfilePopup extends Popup {
         super.setEventListeners();
         this.popup.addEventListener('submit', e => {
             e.preventDefault();
-            //this.fullUserInfo.setUserInfo(this.inputUserName.value, this.inputUserAbout.value); Надо исправить: +++
 
             this.api.postUserInfo(this.inputUserName.value, this.inputUserAbout.value)
                 .then((data) => {
@@ -35,3 +38,7 @@ class EditProfilePopup extends Popup {
         });
     }
 }
+
+export {
+    EditProfilePopup
+};
